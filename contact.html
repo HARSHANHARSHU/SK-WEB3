@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb20ea7e43.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/images/SK.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="./JS/scripts.js"></script>
+
+    <title> SK Web3 Solutions</title>
+    <style>
+        body {
+            background-image: url('/images/contact.jpg'); /* Change to your background image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo sm-heading text-light animate__animated animate__bounceInDown"><i class="fas fa-crown"></i> SK Web3 Solutions</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            
+            </ul>
+        </div>
+    </nav>
+    <section class="contact-form">
+        <div class="container">
+            <div class="contact-details">
+                <h2 class="md-heading">Contact Details</h2>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt fa-2x text-red"></i>
+                    <p>Address need to add here</p>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone-square-alt fa-2x text-red"></i>
+                    <p>00000000000</p>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope fa-2x text-red"></i>
+                    <p>skillkasterweb3@gmail.com</p>
+                </div>
+            </div>
+            
+            <form action="https://formspree.io/f/xanwnlpp" method="POST" class="form" target="_blank">
+                <h1 class="lg-heading text-black">Contact Us</h1>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="text" name="phone" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <button type="submit" class="form-btn">Submit</button>
+            </form>
+            
+        </div>
+    </section>
+  <footer class="footer">
+    <div class="social-media-links">
+
+        <i class="fab fa-whatsapp fa-4x" data-link="https://wa.me/6379116994"></i>
+        <!-- <i class="fab fa-instagram fa-4x" data-link="https://www.instagram.com/hanzo_pawsknot?igsh=MWZ4ODlqYWw0cW1sNw=="></i> -->
+        <i class="fab fa-linkedin fa-4x" data-link="https://www.linkedin.com/company/skillkaster/"></i>
+    
+        <script>
+            document.querySelectorAll('.fab').forEach(icon => {
+                const link = icon.getAttribute('data-link');
+                if (link) {
+                    icon.addEventListener('click', () => {
+                        window.open(link, '_blank');
+                    });
+                }
+            });
+        </script>
+    </div>
+    <p> &copy; 2024 SK Web3 Solutions </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Gc6I4DIC4Vs0XGfXBJTyJMLtzDR1lRXN/KO+b9WTh1UBRgx9POfB6JgAxkDkQFxhIRy2kp9DAlG2Z0MG0Y/6bw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    AOS.init();
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

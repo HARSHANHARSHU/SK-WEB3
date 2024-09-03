@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb20ea7e43.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="./JS/scripts.js"></script>
+    <link rel="icon" href="/images/SK.png" type="image/png">
+    <title>SK Web3 Solutions</title>
+    <style>
+        body {
+            background-image: url('/images/about2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for navbar */
+            padding: 10px 0;
+        }
+        .logo {
+            font-size: 24px;
+            color: #fff;
+        }
+        .nav-items {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-item {
+            display: inline;
+            margin: 0 15px;
+        }
+        .nav-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .hero {
+            margin-bottom: 40px;
+        }
+        .profile-cards {
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .profile-card {
+            background: rgba(62, 60, 60, 0.558);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(16, 200, 175, 0.352);
+            width: 320px;
+            padding: 9px;
+            text-align: center;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+       
+        .profile-card h2 {
+            margin-top: 10px;
+            font-size: 2em;
+            color: #fefefe;
+        }
+        .profile-card p {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .social-media-links i {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="shakya">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo sm-heading text-light animate__animated animate__bounceInDown"><i class="fas fa-crown"></i> SK Web3 Solutions</h1>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="index.html">Home</a></li>
+              <li class="nav-item"><a href="about.html">About Us</a></li>
+              <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about">
+        <div class="hero has-before" id="home">
+            <div class="container">   
+                <h1 class="lg-heading text-dark" style="
+                background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+                border-radius: 100px; /* Rounded corners */
+                padding: 10px; /* Padding around the text */
+                backdrop-filter: blur(10px); /* Apply blur effect */
+                -webkit-backdrop-filter: blur(10px); /* For Safari */
+                color: #ffffff; /* Text color */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better effect */
+            ">ABOUT SK Web3 Solutions</h1>
+            <div class="content text-light">
+                <p>At Skillkaster, we are at the forefront of the digital revolution, specializing in seamlessly integrating traditional Web2 frameworks with the groundbreaking possibilities of Web3 technologies. Our mission is to bridge the gap between conventional digital solutions and the emerging innovations of blockchain technology, ensuring that our clients remain ahead of the curve in an ever-evolving technological landscape...</p>            
+              </div>
+              <br><br><br>
+              <div class="profile-cards">
+                <!-- Example profile card -->
+                <div class="profile-card">
+                    <h2>Website Design and Development</h2>
+                    <p>We offer comprehensive website design and development services that cater to a wide range of needs. From creating visually stunning and highly functional websites to implementing the latest in responsive design techniques, we ensure that your online presence is both engaging and effective. Our team uses state-of-the-art technologies and best practices to deliver websites that are not only aesthetically pleasing but also optimized for performance and user experience.</p>
+                </div>
+                <!-- Add more profile cards as needed -->
+                <div class="profile-card">
+                    <h2>Decentralized Application (DApp) Creation</h2>
+                    <p> As pioneers in Web3 technology, we excel in the development of decentralized applications (DApps). Our expertise in blockchain technology allows us to build DApps that leverage the benefits of decentralization, including enhanced security, transparency, and user control. Whether you are looking to create a new application from scratch or integrate blockchain functionality into an existing platform, we provide innovative solutions that meet your unique requirements.</p>
+                </div>
+                <div class="profile-card">
+                    <h2>Smart Contract Development</h2>
+                    <p>Smart contracts are a cornerstone of blockchain technology, enabling automated, trustless transactions and interactions. Our team of experienced developers specializes in crafting secure and efficient smart contracts that are tailored to your specific needs. We ensure that these contracts are thoroughly tested and audited to guarantee their reliability and effectiveness in executing predetermined actions.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social-media-links">
+            <i class="fab fa-whatsapp fa-4x" data-link="https://wa.me/6379116994"></i>
+            <!-- <i class="fab fa-instagram fa-4x" data-link="https://www.instagram.com/hanzo_pawsknot?igsh=MWZ4ODlqYWw0cW1sNw=="></i> -->
+            <i class="fab fa-linkedin fa-4x" data-link="https://www.linkedin.com/company/skillkaster/"></i>
+        
+            <script>
+                document.querySelectorAll('.fab').forEach(icon => {
+                    const link = icon.getAttribute('data-link');
+                    if (link) {
+                        icon.addEventListener('click', () => {
+                            window.open(link, '_blank');
+                        });
+                    }
+                });
+            </script>
+        </div>
+        <p>&copy; 2024 SK Web3 Solutions</p>
+    </footer>
+</body>
+</html>

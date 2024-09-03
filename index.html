@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK Web3 Solutions</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/SK.png" type="image/png">
+    <script src="https://kit.fontawesome.com/eb20ea7e43.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-pDWoMsi7XyG3EoOYWKmtz70CE35FZ2q7XPUOoaD8Oi+XcclXv38Z3K6GArRzHPhKMTNp85HKX1e1BZ3Pk+KnnQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <style>
+           .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Ensures the video is behind the content */
+        filter: brightness(70%);
+    }
+    
+
+    </style>    
+    
+
+ </head>
+ <body>
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="/images/bgvid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header class="header">
+        <!-- <video autoplay muted loop id="header-video">
+            <source src="/images/bgvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="/images/SK.png" alt="SK Web3 Solutions Logo">
+                </a>
+                <ul class="nav-items">
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+        <section class="welcome">
+            <div class="text-content">
+                <h1 class="md-heading text-light neon-text"> Welcome To SK Web3 Solutions </h1>
+                <p>We provide top-notch services in web apps, blockchain projects, crypto, and security.</p>
+                
+                <a href="about.html" class="btn btn-primary text-red md-heading">Learn More</a>
+
+            </div>
+        </section>
+    
+        
+
+
+
+    </header>
+
+    <footer class="footer" style="    background: rgba(0, 0, 0, 0.008);">
+        <div class="social-media-links" data-aos="fade-up">
+            <i class="fab fa-whatsapp fa-4x" data-link="https://wa.me/6379116994"></i>
+            <!-- <i class="fab fa-instagram fa-4x" data-link="https://www.instagram.com/hanzo_pawsknot?igsh=MWZ4ODlqYWw0cW1sNw=="></i> -->
+            <i class="fab fa-linkedin fa-4x" data-link="https://www.linkedin.com/company/skillkaster/"></i>
+            <script>
+                document.querySelectorAll('.fab').forEach(icon => {
+                    const link = icon.getAttribute('data-link');
+                    icon.addEventListener('click', () => {
+                        window.open(link, '_blank');
+                    });
+                });
+            </script>
+        </div>
+        <p> &copy; 2024 SK Web3 Solutions </p>
+    </footer>
+
+
+  <script>
+        // GSAP Animations
+        gsap.from(".welcome", { opacity: 0, y: -50, duration: 1.5, ease: "power3.out" });
+        gsap.from(".neon-text", { textShadow: "none", duration: 2, repeat: -1, yoyo: true });
+
+        // Slick Slider Initialization
+        $('.testimonial-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+
+        // AOS Initialization
+        AOS.init();
+
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+
+        
+    </script>
+
+    <script src="js/main.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+
+
+</body>
+</html>
