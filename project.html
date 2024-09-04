@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eb20ea7e43.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="icon" href="/images/SK.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/MorphSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/Draggable.min.js"></script>
+    <title>SK Web3 Solutions</title>
+
+</head>
+
+<style>
+       .bg-video {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         z-index: -1; /* Ensures the video is behind the content */
+         filter: brightness(60%);
+     }
+    
+</style>
+
+<body class="shakya">
+
+
+
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo sm-heading text-light animate__animated animate__bounceInDown"><i class="fas fa-crown"></i> SK Web3 Solutions</h1>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="index.html">Home</a></li>
+              <li class="nav-item"><a href="about.html">About Us</a></li>
+              <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <video class="bg-video" autoplay loop muted playsinline>
+        <source src="/images/projects/bg-projects.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+   
+    <section class="section" id="genix">
+        <div class="container">
+            <div class="row row1">
+                <div class="img-box"><img src="/images/projects/nft.jpeg" alt="NFT Marketplace"></div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black lt-space">NFT Marketplace</h2>
+                    <p class="text-gray">An NFT marketplace is a digital platform where users can buy, sell, and trade unique digital assets, like art, music, and collectibles, secured by blockchain technology</p>
+                    <a href="https://github.com/soloking1412" class="btn btn-secondary">View On GitHub</a>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="img-box"><img src="/images/projects/Decentralised Exchange.jpeg" alt="Decentralised Exchange"></div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black lt-space">Decentralised Exchange</h2>
+                    <p class="text-gray">A decentralized exchange (DEX) is a peer-to-peer platform that enables users to trade cryptocurrencies directly without relying on a central authority or intermediary.</p>
+                    <a href="https://github.com/soloking1412" class="btn btn-secondary">View On GitHub</a>
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="img-box"><img src="/images/projects/smart-contracts.jpeg" alt="Smart Contracts"></div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black lt-space">Smart Contracts</h2>
+                    <p class="text-gray">Smart contracts are self-executing digital agreements that automatically enforce terms when specified conditions are met.</p>
+                    <a href="https://github.com/soloking1412" class="btn btn-secondary">View On GitHub</a>
+                </div>
+            </div>
+            <div class="row row4">
+                <div class="img-box"><img src="/images/projects/defi.jpeg" alt="DeFi Apps"></div>
+                <div class="text-box">
+                    <h2 class="lg-heading text-black lt-space">DeFi Apps</h2>
+                    <p class="text-gray">DeFi apps, or decentralized finance applications, provide financial services like lending, borrowing, and trading on blockchain networks without intermediaries.</p>
+                    <a href="https://github.com/soloking1412" class="btn btn-secondary">View On GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+            <div class="social-media-links">
+                <i class="fab fa-whatsapp fa-4x" data-link="https://wa.me/6379116994"></i>
+                <i class="fab fa-github fa-4x" data-link="https://github.com/soloking1412"></i>
+                <i class="fab fa-linkedin fa-4x" data-link="https://www.linkedin.com/company/skillkaster/"></i>
+        </div>
+        <p>SK Web3 Solutions</p>
+    </footer>
+    
+    <!-- Existing GSAP and other JavaScript code -->
+    <script>
+        // GSAP Timeline for header animations
+        const headerTimeline = gsap.timeline();
+        headerTimeline.from(".header-content h1", { duration: 1,  opacity: 0, ease: "bounce" })
+            .from(".header-content p", { duration: 1, opacity: 0, delay: 0.5 }, "-=0.5")
+            .from(".btn-primary", { duration: 1, scale: 0, delay: 1, ease: "elastic" }, "-=0.5")
+            .from(".navbar", { duration: 1, opacity: 0, ease: "power2.out" }, "-=1.5");
+
+        // GSAP ScrollTrigger for section animations
+        gsap.utils.toArray('.row').forEach((row, i) => {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: row,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            })
+            .from(row.querySelector('.img-box img'), {  opacity: 0, duration: 1, ease: "power2.out" })
+            .from(row.querySelector('.text-box'), { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
+        });
+
+        // GSAP animation for features section
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".features",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        })
+        .from(".box1", {  opacity: 0, duration: 1, ease: "power2.out" })
+        .from(".box2", {  opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+        .from(".box3", {  opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
+
+        // GSAP animation for social media icons
+        gsap.from(".social-media-links i", { scale: 0, opacity: 0, duration: 1, delay: 5, stagger: 0.2, ease: "back" });
+
+        // GSAP animation for footer text
+        gsap.from("footer p", { y: 50, opacity: 0, duration: 1, delay: 5, ease: "power2.out" });
+
+        // SplitText example animation
+        // const splitText = new SplitText(".header-content h1", { type: "chars" }); 
+        // gsap.from(splitText.chars, { duration: 1, opacity: 0, stagger: 0.05, ease: "back" });
+
+        // Draggable example
+        Draggable.create(".social-media-links i", { bounds: "body" });
+
+        // Add event listeners for social media icons
+        document.querySelectorAll('.fab').forEach(icon => {
+            const link = icon.getAttribute('data-link');
+            if (link) {
+                icon.addEventListener('click', () => {
+                    window.open(link, '_blank');
+                });
+            }
+        });
+
+        // Select elements
+        const socialIcons = document.querySelectorAll('.social-media-links i');
+        const footerText = document.querySelector('footer p');
+
+        // Animation for social media icons
+        socialIcons.forEach((icon, index) => {
+            icon.animate([
+                { opacity: 0, transform: 'scale(0.5)' },
+                { opacity: 1, transform: 'scale(1)' }
+            ], {
+                duration: 1000,
+                delay: index * 200,
+                fill: 'forwards'
+            });
+        });
+
+        // Animation for footer text
+        footerText.animate([
+            { opacity: 0, transform: 'translateY(50px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+        ], {
+            duration: 1000,
+            delay: 800,
+            fill: 'forwards'
+        });
+
+        // Add event listeners for social media icons
+        document.querySelectorAll('.fab').forEach(icon => {
+            const link = icon.getAttribute('data-link');
+            if (link) {
+                icon.addEventListener('click', () => {
+                    window.open(link, '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
